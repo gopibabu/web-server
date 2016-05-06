@@ -1,18 +1,10 @@
 var express = require('express');
 var app = express();
 var PORT= 3000;
-var middelware = {
-	requireAuthentication:function (req, res, next) {
-		console.log('private route is done');
-		next();
-	
-},
-logger: function (req, res , next) {
-	console.log(req.method + ' ' + req.originalUrl);
-	next();
-   }
-};
-app.use(middelware.logger);
+
+var middleware = require('./middleware.js');
+
+app.use(middleware.logger);
 
 app.get('/', function(req,res){
 	res.send('Hi, this is sample app for server');
