@@ -8,5 +8,6 @@
   },
   "author": "gopi",
   "license": "ISC",
-  "dependencies": "^express@4.13.4"
+  "dependencies": "^express@4.13.4",
+  "dependencies": "^node@0.0.0"
 }
